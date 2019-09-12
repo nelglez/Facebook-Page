@@ -18,13 +18,14 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var middleImageView: UIImageView!
     @IBOutlet weak var cameraIconImageView: UIImageView!
-    @IBOutlet weak var coverImageCameraIcon: UIImageView!
+    @IBOutlet weak var coverImageCameraIconView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupMiddleImageViewAppearance()
         setupCameraImageViewAppearance()
+        setupCoverCameraImageViewAppearance()
         
     }
     
@@ -40,6 +41,12 @@ class ViewController: UIViewController {
         cameraIconImageView.layer.masksToBounds = true
         cameraIconImageView.layer.borderWidth = 5
         cameraIconImageView.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    private func setupCoverCameraImageViewAppearance() {
+        coverImageCameraIconView.layer.cornerRadius = 5
+        cameraIconImageView.layer.masksToBounds = true
+
     }
 
 
